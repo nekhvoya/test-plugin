@@ -1,0 +1,44 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+  <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+  <id>org.jetbrains.test-plugin</id>
+
+  <!-- Public plugin name should be written in Title Case.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+  <name>Test Actions</name>
+
+  <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+  <vendor email="test@test.com">JetBrains</vendor>
+
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+  <description><![CDATA[
+   A simple test plugin implementing test actions
+  ]]></description>
+
+  <!-- Product and plugin compatibility requirements.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <!-- Extension points defined by the plugin.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+  <extensions defaultExtensionNs="com.intellij">
+
+  </extensions>
+
+  <actions>
+      <action id="org.jetbrains.TestTaskAction1" class="org.jetbrains.testplugin.TestAction1" text="Test Action 1"
+              description="Test Action 1">
+          <add-to-group group-id="ToolsMenu" anchor="first"/>
+      </action>
+      <action id="org.jetbrains.TestTaskAction2" class="org.jetbrains.testplugin.TestAction2" text="Test Action 2"
+              description="Test Action 2">
+          <add-to-group group-id="ToolsMenu" anchor="first"/>
+      </action>
+      <action id="org.jetbrains.TestTaskAction3" class="org.jetbrains.testplugin.TestAction3" text="Test Action 3"
+              description="Test Action 3">
+          <add-to-group group-id="ToolsMenu" anchor="first"/>
+      </action>
+  </actions>
+</idea-plugin>
